@@ -20,6 +20,8 @@ main .wrapper {
     height: auto;
 }
 
+footer { background: black; }
+
 nav ul,
 footer ul {
     font-family: 'Helvetica', 'Arial', 'Sans-Serif';
