@@ -1,0 +1,34 @@
+// header.scss
+header .wrapper {
+    display: table;
+    width: 98%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+header .wrapper .logo-wrapper,
+header .wrapper .nav-wrapper,
+header .copyright {
+    display: table-cell;
+}
+
+header .wrapper .logo-wrapper {
+    padding-left: 10px;
+    width: 70px;
+}
+
+header .wrapper .nav-wrapper {
+    vertical-align: middle;
+    text-align: right;
+}
+
+header .logo {
+    height: 50px;
+    width: 50px;
+}
+
+header .copyright {
+    vertical-align: middle;
+    font-size: 1.2em;
+    font-weight: bold;
+}

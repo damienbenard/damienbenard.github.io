@@ -2,23 +2,33 @@
 
     <div class="wrapper">
 
-        <h1>Header</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/about">About</a>
-                </li>
-                <li>
-                    <a href="/cv">CV</a>
-                </li>
-                <li>
-                    <a href="/blog">Blog</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="logo-wrapper">
+            <a href="/">
+                <img class="logo" src="{{ site.images-default }}/logo.png" alt="{{ site.hostname }}" />
+            </a>
+        </div>
+        <div class="copyright">{{ site.copyright }}</div>
+        <div class="nav-wrapper">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="/resume">Resume</a>
+                    </li>
+                    <li>
+                        <a href="/contact">contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
     </div>
 

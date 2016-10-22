@@ -1,0 +1,25 @@
+// footer.scss
+footer .logo {
+    height: 50px;
+    width: 50px;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+footer {
+    font-size: .8em;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1em;
+    text-align: center;
+}
+
+footer .logo-wrapper {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+}

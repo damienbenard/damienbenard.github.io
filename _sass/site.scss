@@ -1,0 +1,87 @@
+// site.scss
+$font-title: 'Montserrat',
+'Helvetica',
+'Arial',
+'Sans-Serif';
+$font-content: 'Open Sans',
+'Helvetica',
+'Arial',
+'Sans-Serif';
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    font-family: $font-content;
+}
+
+#site-wrapper {
+    display: table;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+
+header,
+footer,
+main .wrapper {
+    display: table-row;
+    height: 1px;
+}
+
+main {
+    width: 70%;
+    margin: 0 auto;
+}
+
+main .wrapper {
+    height: auto;
+}
+
+nav ul,
+footer ul {
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+}
+
+nav ul li,
+footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:last-child,
+footer ul li:last-child {
+    margin-right: 0px;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: #999;
+}
+
+a:active {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-size: 3em;
+    font-family: $font-title;
+}
+
+p {
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: #333;
+}

@@ -2,7 +2,35 @@
 
     <div class="wrapper">
 
-        <p>Copyright {{ site.name }}</p>
+        <div class="nav-wrapper">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="/resume">Resume</a>
+                    </li>
+                    <li>
+                        <a href="/contact">contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="logo-wrapper">Hourya
+            <a href="/">
+                <img class="logo" src="{{ site.images-default }}/logo.png" alt="{{ site.hostname }}" />
+            </a> Herrou
+        </div>
+
+        <p>&#169; {{ site.year }} {{ site.copyright }} &#8901; All rights reserved.</p>
 
     </div>
 
