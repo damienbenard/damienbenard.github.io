@@ -1,4 +1,14 @@
 // header.scss
+header {
+    @include box-shadow(0, 1px, 4px, rgba(0, 0, 0, 0.3));
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+}
+
 header .wrapper {
     display: table;
     width: 98%;
@@ -23,12 +33,18 @@ header .wrapper .nav-wrapper {
 }
 
 header .logo {
-    height: 50px;
-    width: 50px;
+    height: $logo-height;
+    width: $logo-width;
+    margin-right: 30px;
 }
 
 header .copyright {
     vertical-align: middle;
-    font-size: 1.2em;
-    font-weight: bold;
+    font-size: 1.8em;
+    font-weight: 300;
+    font-family: $font-name;
+}
+
+header nav {
+    font-size: 1em;
 }

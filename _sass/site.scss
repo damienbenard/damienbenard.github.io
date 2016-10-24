@@ -1,4 +1,8 @@
 // site.scss
+$font-name: 'Julius Sans One',
+'Helvetica',
+'Arial',
+'Sans-Serif';
 $font-title: 'Montserrat',
 'Helvetica',
 'Arial',
@@ -7,8 +11,12 @@ $font-content: 'Open Sans',
 'Helvetica',
 'Arial',
 'Sans-Serif';
+$logo-height: 60px;
+$logo-width: 60px;
 html {
     height: 100%;
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
@@ -16,6 +24,7 @@ body {
     width: 100%;
     height: 100%;
     font-family: $font-content;
+    overflow-x: hidden;
 }
 
 #site-wrapper {
@@ -41,38 +50,37 @@ main .wrapper {
     height: auto;
 }
 
-nav ul,
-footer ul {
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-}
-
-nav ul li,
-footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li:last-child,
-footer ul li:last-child {
-    margin-right: 0px;
+nav,
+footer {
+    ul {
+        padding: 0px;
+        list-style: none;
+        font-weight: bold;
+        li {
+            display: inline;
+            margin-right: 20px;
+        }
+        li:last-child {
+            margin-right: 0px;
+        }
+    }
 }
 
 a,
 a:visited {
     text-decoration: none;
-    color: #999;
+    color: black;
 }
 
 a:active {
     text-decoration: none;
-    color: black;
+    color: #999;
 }
 
 a:hover {
     text-decoration: none;
-    color: black;
+    color: #999;
+    border-bottom: 2px solid rgba(153, 153, 153, 0.6);
 }
 
 h1 {
@@ -84,4 +92,8 @@ p {
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
+}
+
+#hero img {
+    width: 100%;
 }

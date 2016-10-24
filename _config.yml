@@ -28,6 +28,7 @@ hostname: "houryaherrou.com"
 github_username:  damienbenard
 repository: damienbenard/damienbenard.github.io.
 images-default: /images
+js-default: /js
 year: 2016
 
 # Build settings
