@@ -7,13 +7,42 @@ header {
     top: 0;
     left: 0;
     background-color: white;
+    @include transition(all 0.3s);
+    .wrapper {
+        display: table;
+        width: 98%;
+        margin: auto;
+        margin-top: 20px;
+        @include transition(all 0.3s);
+        .logo-wrapper {
+            padding-left: 10px;
+            width: 70px;
+            @include transition(all 0.3s);
+            .logo {
+                margin-right: 30px;
+                width: $logo-width;
+                height: $logo-height;
+                @include transition(all 0.3s);
+            }
+        }
+    }
+    .nav-wrapper {
+        vertical-align: middle;
+        text-align: right;
+        nav {
+            font-size: 1em;
+            ul a {
+                @include transition(all 0.3s);
+            }
+        }
+    }
 }
 
-header .wrapper {
-    display: table;
-    width: 98%;
-    margin: auto;
-    margin-top: 20px;
+.copyright {
+    vertical-align: middle;
+    font-size: 1.8em;
+    font-weight: 300;
+    font-family: $font-name;
 }
 
 header .wrapper .logo-wrapper,
@@ -22,29 +51,34 @@ header .copyright {
     display: table-cell;
 }
 
-header .wrapper .logo-wrapper {
-    padding-left: 10px;
-    width: 70px;
-}
-
-header .wrapper .nav-wrapper {
-    vertical-align: middle;
-    text-align: right;
-}
-
-header .logo {
-    height: $logo-height;
-    width: $logo-width;
-    margin-right: 30px;
-}
-
-header .copyright {
-    vertical-align: middle;
-    font-size: 1.8em;
-    font-weight: 300;
-    font-family: $font-name;
-}
-
-header nav {
-    font-size: 1em;
+header.compact {
+    height: 30px;
+    /*background-color: black;*/
+    .wrapper {
+        margin-top: 5px;
+        .logo-wrapper {
+            width: 30px;
+            .logo {
+                width: $logo-min-width;
+                height: $logo-min-height;
+                margin: 0;
+            }
+        }
+        .copyright {
+            font-size: 0.8em;
+            /* color: white;*/
+        }
+        nav {
+            font-size: 0.8em;
+            ul {
+                margin: 0;
+                a {
+                    /*color: white;*/
+                }
+                a:hover {
+                    /*border-bottom: 1px solid white;*/
+                }
+            }
+        }
+    }
 }
