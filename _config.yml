@@ -15,14 +15,14 @@
 # in the templates via {{ site.myvariable }}.
 title: Hourya Herrou
 name: Hourya Herrou
-email: dami.benard.pro@gmail.com
+email: dam.benard.pro@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 #url: "http://damienbenard.com" # the base hostname & protocol for your site
-url: "https://damienbenard.github.io" # the base hostname & protocol for your site
+url: "http://damienbenard.github.io" # the base hostname & protocol for your site
 hostname: "houryaherrou.com"
 #twitter_username: damienbenard
 github_username:  damienbenard
@@ -39,3 +39,20 @@ markdown: kramdown
 sass:
   sass_dir: _sass
   #style: compressed # Turn on for production
+
+# Plugins
+gems:
+  - jekyll-redirect-from
+
+# Whitelist (for safe mode)
+whitelist:
+  - jekyll-redirect-from
+
+# Default settings for YAML front matter values
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+      lang: "en"
