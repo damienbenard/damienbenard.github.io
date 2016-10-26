@@ -4,7 +4,8 @@
 
 setHeader = ->
     scrollTop     = $(window).scrollTop()
-    headerOffset  = $('header').outerHeight true
+    #headerOffset  = $('header').outerHeight true
+    headerOffset  = 70
     elementOffset = $('main:first').offset().top
     distance      = (elementOffset - headerOffset - scrollTop)
     if distance < 0
@@ -22,7 +23,9 @@ $('header.site-header nav a').click ->
   if target.length && target.charAt(0) == '#'
     event.preventDefault()
     history.replaceState null, '', target
-    $('html,body').animate { scrollTop: $(target).offset().top - 40 }, speed
+    #headerOffset  = $('header').outerHeight true
+    headerOffset = 40
+    $('html,body').animate { scrollTop: $(target).offset().top - headerOffset }, speed
   else if !target.length
     event.preventDefault()
     history.replaceState null, '', ' '
