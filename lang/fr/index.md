@@ -8,7 +8,7 @@ permalink: /fr/
 
 # <a id="about">À propos...</a> #
 
-test
+Ceci est le paragraphe à propos. Raconte ta vie quoi !
 
 # <a id="portfolio">Portfolio</a> #
 
