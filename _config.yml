@@ -35,6 +35,10 @@ year: 2016
 markdown: kramdown
 #theme: minima
 
+# Kramdown configuration
+kramdown:
+  auto_ids: false
+
 # SASS settings
 sass:
   sass_dir: _sass

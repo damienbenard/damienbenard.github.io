@@ -15,6 +15,10 @@ $logo-height: 60px;
 $logo-width: 60px;
 $logo-min-height: 20px;
 $logo-min-width: 20px;
+$font-color: black;
+$font-color-link-hover: #999;
+$font-color-link-underline: rgba(153, 153, 153, 0.6);
+$font-color-paragraph: #333;
 html {
     height: 100%;
     margin: 0px;
@@ -71,29 +75,33 @@ footer {
 a,
 a:visited {
     text-decoration: none;
-    color: black;
+    color: $font-color;
 }
 
 a:active {
     text-decoration: none;
-    color: #999;
+    color: $font-color-link-hover;
 }
 
 a:hover {
     text-decoration: none;
-    color: #999;
-    border-bottom: 2px solid rgba(153, 153, 153, 0.6);
+    color: $font-color-link-hover;
+    border-bottom: 2px solid $font-color-link-underline;
 }
 
 h1 {
     font-size: 3em;
     font-family: $font-title;
+    a:hover {
+        color: $font-color;
+        border-bottom: none;
+    }
 }
 
 p {
     font-size: 1.5em;
     line-height: 1.4em;
-    color: #333;
+    color: $font-color-paragraph;
 }
 
 #hero img {
