@@ -31,7 +31,7 @@ header {
         text-align: right;
         nav {
             font-size: 1em;
-            ul a {
+            ul {
                 @include transition(all 0.3s);
             }
         }
@@ -53,11 +53,10 @@ header .copyright {
 
 header.compact {
     height: 30px;
-    /*background-color: black;*/
     .wrapper {
         margin-top: 5px;
         .logo-wrapper {
-            width: 30px;
+            width: 40px;
             .logo {
                 width: $logo-min-width;
                 height: $logo-min-height;
@@ -66,17 +65,13 @@ header.compact {
         }
         .copyright {
             font-size: 0.8em;
-            /* color: white;*/
         }
         nav {
             font-size: 0.8em;
             ul {
                 margin: 0;
                 a {
-                    /*color: white;*/
-                }
-                a:hover {
-                    /*border-bottom: 1px solid white;*/
+                    border-bottom-width: 1px;
                 }
             }
         }
