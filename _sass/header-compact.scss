@@ -1,0 +1,63 @@
+.wrapper {
+    #nav-default {
+        .logo-wrapper,
+        .copyright,
+        .nav-wrapper {
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+        .logo-wrapper {
+            width: 40px;
+            .logo {
+                width: $logo-min-width;
+                height: $logo-min-height;
+                margin: 0;
+            }
+        }
+        .copyright {
+            font-size: 0.8em;
+        }
+        .nav-wrapper nav {
+            font-size: 0.8em;
+            ul li {
+                a {
+                    border-bottom-width: 1px;
+                }
+                &.contact a {
+                    border-width: 2px;
+                    padding: 0px 2px;
+                }
+                &#hamburger {
+                    a {
+                        span {
+                            &:nth-child(1) {
+                                top: 2px;
+                            }
+                            &:nth-child(2),
+                            &:nth-child(3) {
+                                top: 8px;
+                            }
+                            &:nth-child(4) {
+                                top: 14px;
+                            }
+                        }
+                    }
+                    &.open a {
+                        span:nth-child(1),
+                        span:nth-child(4) {
+                            top: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #nav-mobile {
+        font-size: 0.8em;
+        ul li {
+            padding-bottom: 5px;
+            margin: 5px;
+            min-width: 50px;
+        }
+    }
+}

@@ -1,79 +1,183 @@
 // header.scss
 header {
-    @include box-shadow(0, 1px, 4px, rgba(0, 0, 0, 0.3));
-    height: 100px;
-    width: 100%;
     position: fixed;
-    top: 0;
-    left: 0;
-    background-color: white;
-    @include transition(all 0.3s);
+    width: 100%;
     .wrapper {
         display: table;
-        width: 98%;
-        margin: auto;
-        margin-top: 20px;
+        width: 100%;
+        background-color: $header-background-color;
+        @include box-shadow(0, 1px, 4px, rgba(0, 0, 0, 0.3));
         @include transition(all 0.3s);
-        .logo-wrapper {
-            padding-left: 10px;
-            width: 70px;
-            @include transition(all 0.3s);
-            .logo {
-                margin-right: 30px;
-                width: $logo-width;
-                height: $logo-height;
+        #nav-default {
+            display: table-row;
+            width: 100%;
+            .logo-wrapper,
+            .copyright,
+            .nav-wrapper {
+                display: table-cell;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                vertical-align: middle;
                 @include transition(all 0.3s);
             }
-        }
-    }
-    .nav-wrapper {
-        vertical-align: middle;
-        text-align: right;
-        nav {
-            font-size: 1em;
-            ul {
-                @include transition(all 0.3s);
+            &.no-padding {
+                .logo-wrapper,
+                .copyright,
+                .nav-wrapper {
+                    padding-bottom: 0px;
+                }
             }
-        }
-    }
-}
-
-.copyright {
-    vertical-align: middle;
-    font-size: 1.8em;
-    font-weight: 300;
-    font-family: $font-name;
-}
-
-header .wrapper .logo-wrapper,
-header .wrapper .nav-wrapper,
-header .copyright {
-    display: table-cell;
-}
-
-header.compact {
-    height: 30px;
-    .wrapper {
-        margin-top: 5px;
-        .logo-wrapper {
-            width: 40px;
-            .logo {
-                width: $logo-min-width;
-                height: $logo-min-height;
-                margin: 0;
+            .logo-wrapper {
+                width: 70px;
+                padding-left: 10px;
+                .logo {
+                    margin-right: 30px;
+                    width: $logo-width;
+                    height: $logo-height;
+                    @include transition(all 0.3s);
+                }
             }
-        }
-        .copyright {
-            font-size: 0.8em;
-        }
-        nav {
-            font-size: 0.8em;
-            ul {
-                margin: 0;
-                a {
-                    border-bottom-width: 1px;
+            .copyright {
+                vertical-align: middle;
+                font-size: 1.8em;
+                font-weight: 300;
+                font-family: $font-name;
+                span {
+                    display: block;
+                }
+            }
+            .nav-wrapper {
+                text-align: right;
+                padding-right: 10px;
+                padding-left: 0px;
+                nav {
+                    font-size: 1em;
+                    height: 100%;
+                    vertical-align: middle;
+                    ul {
+                        @include transition(all 0.3s);
+                        margin: 0;
+                        li {
+                            display: inline-block;
+                            font-weight: bold;
+                            margin-right: 20px;
+                            &.contact a {
+                                border: 2px solid $font-color;
+                                padding: 2px 4px;
+                                &:hover {
+                                    border-color: $font-color-link-underline;
+                                }
+                            }
+                            &#hamburger {
+                                display: none;
+                                cursor: pointer;
+                                margin-right: 0;
+                                /*@include transition(all 0.3s);*/
+                                a {
+                                    display: inline-block;
+                                    vertical-align: text-top;
+                                    width: 20px;
+                                    @include transform(rotate(0deg));
+                                    @include transition(.5s ease-in-out);
+                                    &:hover {
+                                        border-bottom: none;
+                                    }
+                                    span {
+                                        margin: 0;
+                                        display: block;
+                                        position: absolute;
+                                        height: 2px;
+                                        width: 100%;
+                                        background: $font-color;
+                                        opacity: 1;
+                                        left: 0;
+                                        @include transform(rotate(0deg));
+                                        @include transition(.25s ease-in-out);
+                                        &:nth-child(1) {
+                                            top: 4px;
+                                        }
+                                        &:nth-child(2),
+                                        &:nth-child(3) {
+                                            top: 10px;
+                                        }
+                                        &:nth-child(4) {
+                                            top: 16px;
+                                        }
+                                    }
+                                }
+                                &.open a {
+                                    span:nth-child(1),
+                                    span:nth-child(4) {
+                                        top: 10px;
+                                        width: 0%;
+                                        left: 50%;
+                                    }
+                                    span:nth-child(2) {
+                                        @include transform(rotate(45deg));
+                                    }
+                                    span:nth-child(3) {
+                                        @include transform(rotate(-45deg));
+                                    }
+                                }
+                                &:hover a span {
+                                    background: $font-color-link-hover;
+                                }
+                                &.open a span {
+                                    background: red;
+                                }
+                                &.open:hover a span {
+                                    background: red;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
+        #nav-mobile {
+            display: table-row;
+            width: 100%;
+            @include transition(all 0.3s);
+            .spacer {
+                display: table-cell;
+                width: 0;
+            }
+            ul {
+                display: table-cell;
+                float: right;
+                list-style-type: none;
+                margin: 0;
+                li {
+                    display: none;
+                    margin: 10px;
+                    min-width: 60px;
+                    border-bottom: 1px rgb(223, 223, 223) solid;
+                    padding-bottom: 10px;
+                    padding-left: 50px;
+                    text-align: right;
+                    a {
+                        &:hover {
+                            border-bottom: none;
+                            font-weight: bold;
+                            color: $font-color;
+                        }
+                    }
+                    &:last-child {
+                        border-bottom: none;
+                        padding-bottom: 0;
+                    }
+                }
+            }
+            &.open {
+                display: table-row;
+            }
+        }
     }
+    &.compact {
+        @import 'header-compact';
+    }
+}
+
+#hero img {
+    width: 100%;
 }

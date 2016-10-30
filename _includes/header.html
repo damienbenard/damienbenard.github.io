@@ -2,35 +2,69 @@
 
     <div class="wrapper">
 
-        <div class="logo-wrapper">
-            <img class="logo" src="{{ site.images-default }}/logo.png" alt="{{ site.hostname }}" />
+        <div id="nav-default">
+
+            <div class="logo-wrapper">
+                <img class="logo" src="{{ site.images-default }}/logo.png" alt="{{ site.hostname }}" />
+            </div>
+            <div class="copyright">
+                <span>{{ site.name }}</span>
+            </div>
+            <div class="nav-wrapper">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#resume">Resume</a>
+                        </li>
+                        <li class="contact">
+                            <a href="#contact">Contact</a>
+                        </li>
+                        <li id="hamburger">
+                            <a href="javascript:void(0)">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
         </div>
-        <div class="copyright">{{ site.name }}</div>
-        <div class="nav-wrapper">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="">Home</a>
-                    </li>
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#resume">Resume</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </nav>
+
+        <div id="nav-mobile">
+            <span class="spacer"></span>
+            <span class="spacer"></span>
+            <ul>
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#portfolio">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#resume">Resume</a>
+                </li>
+            </ul>
         </div>
 
     </div>
 
 </header>
+
 <div id="hero">
     <img src="{{ site.images-default }}/home.png" title="{{ site.name }}" alt="{{ site.name }}" />
 </div>

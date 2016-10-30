@@ -1,4 +1,6 @@
 // site.scss
+$threshold: 820px;
+$threshold-compact: 580px;
 $font-name: 'Julius Sans One',
 'Helvetica',
 'Arial',
@@ -19,6 +21,7 @@ $font-color: black;
 $font-color-link-hover: #999;
 $font-color-link-underline: rgba(153, 153, 153, 0.6);
 $font-color-paragraph: #333;
+$header-background-color: white;
 html {
     height: 100%;
     margin: 0px;
@@ -31,13 +34,6 @@ body {
     height: 100%;
     font-family: $font-content;
     overflow-x: hidden;
-}
-
-#site-wrapper {
-    display: table;
-    margin: 0 auto;
-    height: 100%;
-    width: 100%;
 }
 
 header,
@@ -56,37 +52,18 @@ main .wrapper {
     height: auto;
 }
 
-nav,
-footer {
-    ul {
-        padding: 0px;
-        list-style: none;
-        font-weight: bold;
-        li {
-            display: inline;
-            margin-right: 20px;
-        }
-        li:last-child {
-            margin-right: 0px;
-        }
-    }
-}
-
-a,
-a:visited {
+a {
     text-decoration: none;
     color: $font-color;
-}
-
-a:active {
-    text-decoration: none;
-    color: $font-color-link-hover;
-}
-
-a:hover {
-    text-decoration: none;
-    color: $font-color-link-hover;
-    border-bottom: 2px solid $font-color-link-underline;
+    &:hover {
+        text-decoration: none;
+        color: $font-color-link-hover;
+        border-bottom: 2px solid $font-color-link-underline;
+    }
+    &:active {
+        text-decoration: none;
+        color: $font-color-link-hover;
+    }
 }
 
 h1 {
@@ -102,14 +79,4 @@ p {
     font-size: 1.5em;
     line-height: 1.4em;
     color: $font-color-paragraph;
-}
-
-#hero img {
-    width: 100%;
-}
-
-.logo-wrapper a,
-.logo-wrapper a:hover,
-{
-    border-bottom: none;
 }

@@ -1,0 +1,40 @@
+/* When the screen is less than $threshold pixels wide, hide all list items.
+Show the list item that contains the link to open and close the topnav (li.icon) */
+
+@media screen and (max-width:$threshold) {
+    header {
+        .wrapper {
+            #nav-default {
+                .nav-wrapper nav {
+                    float: right;
+                    ul {
+                        li {
+                            display: none;
+                            &:nth-last-child(2) {
+                                display: inline-block;
+                            }
+                            &#hamburger {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    main {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:$threshold-compact) {
+    header {
+        @import 'header-compact';
+    }
+}
+
+@media screen and (min-width:$threshold) {
+    header .wrapper #nav-mobile.open {
+        display: none;
+    }
+}
