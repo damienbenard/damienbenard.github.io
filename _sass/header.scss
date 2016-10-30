@@ -77,12 +77,15 @@ header {
                                 cursor: pointer;
                                 margin-right: 0;
                                 /*@include transition(all 0.3s);*/
-                                .wrapping {
+                                a {
                                     display: inline-block;
                                     vertical-align: text-top;
                                     width: 20px;
                                     @include transform(rotate(0deg));
                                     @include transition(.5s ease-in-out);
+                                    &:hover {
+                                        border-bottom: none;
+                                    }
                                     span {
                                         margin: 0;
                                         display: block;
@@ -106,7 +109,7 @@ header {
                                         }
                                     }
                                 }
-                                &.open .wrapping {
+                                &.open a {
                                     span:nth-child(1),
                                     span:nth-child(4) {
                                         top: 10px;
@@ -120,13 +123,13 @@ header {
                                         @include transform(rotate(-45deg));
                                     }
                                 }
-                                &:hover .wrapping span {
+                                &:hover a span {
                                     background: $font-color-link-hover;
                                 }
-                                &.open .wrapping span {
+                                &.open a span {
                                     background: red;
                                 }
-                                &.open:hover .wrapping span {
+                                &.open:hover a span {
                                     background: red;
                                 }
                             }
