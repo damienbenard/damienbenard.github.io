@@ -36,6 +36,13 @@ body {
     overflow-x: hidden;
 }
 
+header,
+footer,
+main .wrapper {
+    display: table-row;
+    height: 1px;
+}
+
 main {
     width: 70%;
     margin: 0 auto;
