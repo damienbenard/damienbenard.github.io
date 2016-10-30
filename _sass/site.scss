@@ -60,10 +60,9 @@ a {
         color: $font-color-link-hover;
         border-bottom: 2px solid $font-color-link-underline;
     }
-    &:active,
-    &:visited {
+    &:active {
         text-decoration: none;
-        color: $font-color;
+        color: $font-color-link-hover;
     }
 }
 
