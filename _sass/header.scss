@@ -77,7 +77,7 @@ header {
                                 cursor: pointer;
                                 margin-right: 0;
                                 /*@include transition(all 0.3s);*/
-                                a {
+                                .wrapping {
                                     display: inline-block;
                                     vertical-align: text-top;
                                     width: 20px;
@@ -109,7 +109,7 @@ header {
                                         }
                                     }
                                 }
-                                &.open a {
+                                &.open .wrapping {
                                     span:nth-child(1),
                                     span:nth-child(4) {
                                         top: 10px;
@@ -123,13 +123,13 @@ header {
                                         @include transform(rotate(-45deg));
                                     }
                                 }
-                                &:hover a span {
+                                &:hover .wrapping span {
                                     background: $font-color-link-hover;
                                 }
-                                &.open a span {
+                                &.open .wrapping span {
                                     background: red;
                                 }
-                                &.open:hover a span {
+                                &.open:hover .wrapping span {
                                     background: red;
                                 }
                             }

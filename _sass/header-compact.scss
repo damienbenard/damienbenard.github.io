@@ -28,7 +28,7 @@
                     padding: 0px 2px;
                 }
                 &#hamburger {
-                    a {
+                    .wrapping {
                         span {
                             &:nth-child(1) {
                                 top: 2px;
@@ -42,7 +42,7 @@
                             }
                         }
                     }
-                    &.open a {
+                    &.open .wrapping {
                         span:nth-child(1),
                         span:nth-child(4) {
                             top: 8px;
